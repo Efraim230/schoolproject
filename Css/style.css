@@ -21,6 +21,13 @@ a
     text-decoration: none;
 }
 
+
+
+.vonal:hover
+{
+    text-shadow: 5px 3px 10px rgba(56, 2, 56, 0.7);
+}
+
 /* rgb(206,187,219) */
 
 li
@@ -54,8 +61,6 @@ header.shadow
     transition: 0.5s;
 }
 
-
-
 .container
 {
 max-width: 100%;
@@ -80,7 +85,7 @@ width: 100%;
     column-gap: 20px;
 }
 
-.gomb
+.gomb2
 {
     color:rgb(85,26,139);
 text-decoration: none;
@@ -92,7 +97,7 @@ font-size: 1rem;
 text-transform: uppercase;
 }
 
-.gomb:hover
+.gomb2:hover
 {
     background-color: rgb(85,26,139);
     color: white;
@@ -142,4 +147,213 @@ text-transform: uppercase;
 .indexkepek img
 {
     width: 30%;
+}
+
+.lat
+{
+    display: none;
+}
+
+.dropdown-menu
+{
+display: none;
+}
+
+
+
+.dropdown-menu li
+{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+                                        /* RESPONSIVENESS */
+@media (max-width:1000px) 
+{
+
+  
+    .logokep
+    {
+        background-color: rgb(206,187,219);
+        position: absolute;
+        height: 80%;
+        width: 75%;
+        left: 12%;
+        overflow-x: hidden;
+    }
+
+    .kepdiv
+{
+    background-color: rgb(206,187,219);
+    width: 100%;
+    height: 600px;
+}
+
+.lat
+{
+    display: block;
+}
+
+.gomb2
+{
+    display: none;
+}
+
+.gomb
+{
+    color:rgb(85,26,139);
+text-decoration: none;
+padding: 10px 10px;
+cursor: pointer;
+border: none;
+background-color: transparent;
+font-size: 1rem;
+text-transform: uppercase;
+}
+
+.gomb:hover
+{
+    background-color: rgb(85,26,139);
+    color: white;
+    border-radius: 5px;
+    transform: translateY(-3px);
+    transition: all 0.2s ease;
+}
+
+.lat:hover
+{
+cursor: pointer;
+}
+
+.dropdown-menu
+{
+    background-color: rgba(255,255,255, 0.6);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    display: block;
+    height: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    right: 0;
+    top: 55px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dropdown-menu.open
+{
+    height: 300px;
+}
+
+.select
+{
+    color: white;
+    background-color: rgb(85,26,139);
+    border-radius: 5px;
+}
+
+
+}
+
+
+
+                    /* RESPONSIVE < 500 */
+
+
+@media (max-width:500px)
+{
+
+    .indexkepek img
+    {
+        width: 50%;
+    }
+    
+ 
+    .logokep
+    {
+        background-color: rgb(206,187,219);
+        position: absolute;
+        top: -80px;
+        width: 75%;
+        left: 10%;
+        overflow-x: hidden;
+    }
+
+    .kepdiv
+{
+    background-color: rgb(206,187,219);
+    width: 100%;
+    height: 500px;
+}
+
+a
+{
+font-size: 1.4rem;
+}
+
+.dropdown-menu
+{
+    top: 80px;
+}
+
+.dropdown-menu.open
+{
+    width: unset;
+    height: 250px;
+}
+
+}
+
+@media(max-width:450px)
+{
+    .logokep
+    {
+        background-color: rgb(206,187,219);
+        position: absolute;
+        top:-80px;
+        height: 70%;
+        width: 80%;
+        left: 14%;
+        overflow-x: hidden;
+    }
+
+    .kepdiv
+    {
+        background-color: rgb(206,187,219);
+        width: 100%;
+        height: 600px;
+    }
+
+}
+
+@media(max-width:380px)
+{
+    .logokep
+    {
+        background-color: rgb(206,187,219);
+        position: absolute;
+        top:-50px;
+        height: 70%;
+        width: 80%;
+        left: 14%;
+        overflow-x: hidden;
+    }
+
+
+    .kepdiv
+    {
+        background-color: rgb(206,187,219);
+        width: 100%;
+        height: 400px;
+    }
+
 }
