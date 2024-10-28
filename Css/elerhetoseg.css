@@ -12,13 +12,20 @@
 }
 body
 {
-background-color: white
+background-color: rgb(244, 235, 250);
 }
 
 a
 {
     color:rgb(85,26,139);
     text-decoration: none;
+}
+
+
+
+.vonal:hover
+{
+    text-shadow: 5px 3px 10px rgba(56, 2, 56, 0.7);
 }
 
 /* rgb(206,187,219) */
@@ -50,11 +57,9 @@ header
 header.shadow
 {
     background-color: rgb(244, 235, 250);
-    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    box-shadow: 0 5px 4px hsl(0 4% 14% / 10%);
     transition: 0.5s;
 }
-
-
 
 .container
 {
@@ -80,6 +85,125 @@ width: 100%;
     column-gap: 20px;
 }
 
+.gomb2
+{
+    color:rgb(85,26,139);
+text-decoration: none;
+padding: 10px 10px;
+cursor: pointer;
+border: none;
+background-color: transparent;
+font-size: 1rem;
+text-transform: uppercase;
+}
+
+.gomb2:hover
+{
+    background-color: rgb(85,26,139);
+    color: white;
+    border-radius: 5px;
+    transform: translateY(-3px);
+    transition: all 0.2s ease;
+}
+
+::selection
+{
+    background-color: rgb(206,187,219);
+}
+
+.logokep
+{
+    background-color: rgb(206,187,219);
+    position: absolute;
+    height: 90%;
+    width: 85%;
+    left: 7%;
+    overflow-x: hidden;
+}
+
+.kepdiv
+{
+    background-color: rgb(206,187,219);
+    width: 100%;
+    height: 800px;
+}
+
+.select
+{
+    color: white;
+    background-color: rgb(85,26,139);
+    border-radius: 5px;
+}
+
+.indexkepek
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+.indexkepek img
+{
+    width: 30%;
+}
+
+.lat
+{
+    display: none;
+}
+
+.dropdown-menu
+{
+display: none;
+}
+
+
+
+.dropdown-menu li
+{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+                                        /* RESPONSIVENESS */
+@media (max-width:1000px) 
+{
+
+  
+    .logokep
+    {
+        background-color: rgb(206,187,219);
+        position: absolute;
+        height: 80%;
+        width: 75%;
+        left: 12%;
+        overflow-x: hidden;
+    }
+
+    .kepdiv
+{
+    background-color: rgb(206,187,219);
+    width: 100%;
+    height: 600px;
+}
+
+.lat
+{
+    display: block;
+}
+
+.gomb2
+{
+    display: none;
+}
+
 .gomb
 {
     color:rgb(85,26,139);
@@ -101,21 +225,33 @@ text-transform: uppercase;
     transition: all 0.2s ease;
 }
 
-.logokep
+.lat:hover
 {
-    background-color: rgb(206,187,219);
-    position: absolute;
-    height: 90%;
-    width: 85%;
-    left: 7%;
-    overflow-x: hidden;
+cursor: pointer;
 }
 
-.kepdiv
+.dropdown-menu
 {
-    background-color: rgb(206,187,219);
-    width: 100%;
-    height: 650px;
+    background-color: rgba(255,255,255, 0.6);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    display: block;
+    height: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    right: 0;
+    top: 55px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dropdown-menu.open
+{
+    height: 300px;
 }
 
 .select
@@ -125,16 +261,99 @@ text-transform: uppercase;
     border-radius: 5px;
 }
 
-.indexkepek
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 1rem;
+
 }
 
-.indexkepek img
+
+
+                    /* RESPONSIVE < 500 */
+
+
+@media (max-width:500px)
 {
-    width: 45%;
+
+    .indexkepek img
+    {
+        width: 50%;
+    }
+    
+ 
+    .logokep
+    {
+        background-color: rgb(206,187,219);
+        position: absolute;
+        top: -80px;
+        width: 75%;
+        left: 10%;
+        overflow-x: hidden;
+    }
+
+    .kepdiv
+{
+    background-color: rgb(206,187,219);
+    width: 100%;
+    height: 500px;
+}
+
+a
+{
+font-size: 1.4rem;
+}
+
+.dropdown-menu
+{
+    top: 80px;
+}
+
+.dropdown-menu.open
+{
+    width: unset;
+    height: 250px;
+}
+
+}
+
+@media(max-width:450px)
+{
+    .logokep
+    {
+        background-color: rgb(206,187,219);
+        position: absolute;
+        top:-80px;
+        height: 70%;
+        width: 80%;
+        left: 14%;
+        overflow-x: hidden;
+    }
+
+    .kepdiv
+    {
+        background-color: rgb(206,187,219);
+        width: 100%;
+        height: 600px;
+    }
+
+}
+
+@media(max-width:380px)
+{
+    .logokep
+    {
+        background-color: rgb(206,187,219);
+        position: absolute;
+        top:-50px;
+        height: 70%;
+        width: 80%;
+        left: 14%;
+        overflow-x: hidden;
+    }
+
+
+    .kepdiv
+    {
+        background-color: rgb(206,187,219);
+        width: 100%;
+        height: 400px;
+    }
+
 }
