@@ -1,1 +1,6 @@
-console.log(12)
+let header= document.querySelector("header");
+
+window.addEventListener("scroll", ()=>
+    {
+        header.classList.toggle("shadow", window.scrollY > 0)
+    })
